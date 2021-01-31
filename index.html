@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JS Background Animation Effects</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <section>
+    <h2>Happy Day</h2>
+    <div class="banner">
+      <img src="lux.jpg" alt="" hidden>
+      <div class="blocks"></div>
+    </div>
+  </section>
+
+  <!-- <script src="https://unpkg.com/grade-js/docs/dist/grade.js"></script> -->
+  <script>
+    const banner = document.querySelector('.banner')
+    const blocks = document.getElementsByClassName('blocks')
+
+    for (let i = 0; i < 400; i++) {
+      banner.innerHTML += '<div class="blocks"></div>'
+      blocks[i].style.animationDelay = `${i * 0.05}s`
+      // console.log(blocks[i]);
+    }
+
+    // window.addEventListener('load', function(){
+    //   Grade(document.querySelectorAll('section'))
+    // })
+
+    // for (let i = 0; i < 400; i++) {
+    //   banner.innerHTML += '<div class="blocks"></div>'
+    //   const duration = Math.random() * 5
+    //   blocks[i].style.animationDuration = `${2 + duration}s`
+    //   blocks[i].style.animationDelay = `${i * 0.05}s`
+    //   // console.log(blocks[i]);
+    // }
+  </script>
+
+</body>
+</html>
